@@ -38,6 +38,18 @@ no_exp.addEventListener('click',
         }
     });
 
+    // back to Editor Code 
+    let Back = document.querySelector('.back-to-editor');
+    Back.addEventListener('click',(e)=>{
+        const cs = confirm("If you go back to editor may lost your filled information");
+        if(cs == true){
+            console.log("back Editor");
+        }
+        else{
+             e.preventDefault();
+            console.log('cancel ')
+        }
+    });
 
 // ********************  Skills options *********************
 let skillsOp = document.querySelectorAll('.skills-option');
