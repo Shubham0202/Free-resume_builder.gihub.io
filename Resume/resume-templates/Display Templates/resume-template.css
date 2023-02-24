@@ -1,0 +1,68 @@
+html{
+    scroll-behavior: smooth;
+}
+.all-templates{
+    overflow-x: hidden;
+}
+.scroll{
+    font-size: 18px;
+    font-weight: bold;
+    /* background: url("/Resume/resume-templates/template-imges/pexels-rovenimagescom-949587.jpg"); */
+    background: linear-gradient(to right ,#ff7b00,#ff0000,#00ff55,black,violet,deepskyblue,#FF5349,#009acd);
+   background-size: cover;
+   background-clip: text;
+   -webkit-background-clip: text;
+   -moz-background-clip: text;
+   color: transparent;
+   text-align: center;
+   animation: scroll ease 5s infinite;
+   overflow: hidden;
+   padding: 1em;
+}
+
+@keyframes scroll {
+    to{
+        transform: translateX(150px);
+        
+    }
+    from{
+        transform: translateX(0px);
+        opacity: .8;
+    }
+    
+}
+
+.title{
+    background: white;
+}
+
+.template-width{
+    max-width: 430px;
+    max-height: 400px;
+}
+.template-list{
+    background: white;
+    margin-top: 1em;
+}
+.align-left{
+    text-align: left;
+}
+.normal-margin{
+    margin: 1em;
+}
+.all-temp{
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 1fr 1fr ;
+    overflow-x: scroll;
+    /* scroll-snap-type: x proximity; */
+    /* background: rgba(125, 121, 121, 0.287); */
+}
+.all-temp li{
+    scroll-snap-align: start;
+    /* background: white; */
+}
+
+.img-template{
+    border-radius: 5px;
+}

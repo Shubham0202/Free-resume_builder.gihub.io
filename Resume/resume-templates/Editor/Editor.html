@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Editor</title>
+    <link rel="stylesheet" href="edit.css">
+    <link rel="stylesheet" href="design template/defaultTemplate.css">
+    <link rel="stylesheet" href="design template/rebuildtemplate.css">
+    <link rel="shortcut icon" href="/Resume Builder/otherImages/icon.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <main class="main-content">
+        <div class="container Editor">
+            <div class="myacc">
+                <ion-icon name="person-circle-outline" class="profile"></ion-icon>
+            </div>
+            <ul id="acc-dashboard">
+                <li id="acc-profile">
+                        <img src="/Resume Builder/abc.jpg" alt="profile" class="p-img" width="50px">
+                      <div class="em-name ">
+                          <h4 class="p-name ">Shubham Chandgude sunil</h3>
+                          <p class="p-email">Shubham826852@gmail.com</p>  
+                      </div>
+                    
+                </li>
+                <li>
+                    <a class="dashboard-link dAnchor" href="#"> Dashboard</a>
+                </li>
+                <li><a href="#" class="p-edit-profile  dAnchor">Profile</a></li>
+                <li><a href="#" class="premium-upgrade  dAnchor">Upgrade</a></li>
+                <li><a href="#" class="logOut  dAnchor">Log Out</a></li>
+            </ul>
+
+
+            <form id="formContainer">
+                <div class="pdf-name">
+                    <input type="text" name="pdf" id="pdf-input" value="Pdf Name">
+                </div>
+                <div class="personal-details">
+                    <div class="info-title">
+                        <input type="text" name="personal-info-title" id="personal-info-title" value="Personal Details">
+                        <label for="personal-info-title" class="label-padd"><ion-icon
+                                name="create-outline"></ion-icon></label>
+                    </div>
+                    <div class="inner-info">
+                        <div class="job-title">
+                            <label for="job-title" class="label-padd">Wanted Job Title</label>
+                            <input type="text" id="job-title" class="input-adjust">
+                        </div>
+                        <div class="upload-photo">
+                            <label for="mypic" class="label-padd">Upload Photo</label>
+                            <input type="file" name="my-pic" id="mypic" class="input-adjust">
+                        </div>
+                        <div class="first-name">
+                            <label for="fname" class="label-padd">First Name</label>
+                            <input type="text" id="fname" class="input-adjust">
+                        </div>
+                        <div class="last-name">
+                            <label for="lname" class="label-padd">Last Name</label>
+                            <input type="text" id="lname" class="input-adjust">
+                        </div>
+                        <div class="email">
+                            <label for="emA" class="label-padd">Email <span class="red-clr">*</span></label>
+                            <input type="email" id="emA" class="input-adjust">
+                        </div>
+                        <div class="phone">
+                            <label for="pn" class="label-padd">Phone</label>
+                            <input type="tel" id="pn" class="input-adjust">
+                        </div>
+                        <div class="country">
+                            <label for="cntry" class="label-padd">Country</label>
+                            <input type="text" id="cntry" class="input-adjust contr">
+                        </div>
+                        <div class="city">
+                            <label for="ct" class="label-padd">City</label>
+                            <input type="text" id="ct" class="input-adjust">
+                        </div>
+                        <div class="address">
+                            <label for="adrs" class="label-padd">Address
+                                <small class="red">(Optional)</small>
+                            </label>
+                            <input type="text" id="adrs" class="input-adjust">
+                        </div>
+                        <div class="postal-code">
+                            <label for="pscode" class="label-padd">Postal Code
+                                <small class="red">(Optional)</small>
+                            </label>
+                            <input type="text" id="pscode" class="input-adjust">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="professional-summary">
+                    <div class="input-edit">
+                        <input type="text" id="prof-summary" class="edit-info" value="Professional Summary">
+                        <label for="prof-summary" class="label-padd"><ion-icon name="create-outline"></ion-icon></label>
+                    </div>
+                    <div class="black"></div>
+                    <div class="summary-msg">
+                        <p class="prof-summary-msg para">Write 2-4 short & energetic sentences to interest the reader!
+                            Mention
+                            your role, experience & most importantly - your biggest achievements, best qualities and
+                            skills.
+                        </p>
+                    </div>
+                    <div class="text-features">
+
+                        <div class="btn-feature-list">
+                            <span class="bold f-l-btn">B</span>
+                            <span class="Italic f-l-btn">I</span>
+                            <span class="uline f-l-btn">U</span>
+                        </div>
+
+                        <textarea name="prof" id="txtarea"
+                            placeholder="eg. Passinate Science teacher with 8+ years of Experence and also have soft skills"
+                            rows="10">
+                        </textarea>
+                    </div>
+                </div>
+                <div class="emp-history">
+                    <div class="emp-edit">
+                        <input type="text" id="emp-title" value="Employment History" class="edit-info">
+                        <label for="emp-title" class="label-padd"><ion-icon name="create-outline"></ion-icon></label>
+                    </div>
+                    <div class="emp-info ">
+                        <p class="prof-summary-msg para">Write 2-4 short & energetic sentences to interest the reader!
+                            Mention
+                            your role, experience & most importantly - your biggest achievements, best qualities and
+                            skills.
+                        </p>
+                        <div class="emp-add">
+                            + Add employment
+                        </div>
+                    </div>
+                    <div class="emp-fill-data inner-info">
+                        <div class="data-inputs">
+                            <label for="d-name" class="label-padd">Job Title</label>
+                            <input type="text" id="d-name" class="input-adjust">
+                        </div>
+                        <div class="data-inputs">
+                            <label for="d-employer" class="label-padd">Employer</label>
+                            <input type="text" id="d-employer" class="input-adjust">
+                        </div>
+                        <div class="dates">
+                            <label for="d-st" class="label-padd">Start & End Date</label>
+                            <div class="adjust-dates">
+                                <div class="data-inputs">
+                                    <input type="datetime" id="d-st" class="input-adjust" placeholder="MM /YYYY">
+                                </div>
+                                <div class="data-inputs">
+                                    <input type="text" id="d-end" class="input-adjust" placeholder="MM /YYYY">
+                                </div>
+                            </div>
+                        </div> <!-- dates -->
+                        <div class="data-inputs">
+                            <label for="d-city" class="label-padd">City</label>
+                            <input type="text" id="d-city" class="input-adjust">
+                        </div>
+                    </div>
+                </div>
+                <div class="emp-history edu-history">
+                    <div class="emp-edit">
+                        <input type="text" id="edu-title" value="Education" class="edit-info">
+                        <label for="edu-title" class="label-padd"><ion-icon name="create-outline"></ion-icon></label>
+                    </div>
+                    <div class="emp-info">
+                        <p class="prof-summary-msg para">
+                            Add Your School Infomation. <small class="red">(If your <a
+                                    href="https://en.wikipedia.org/wiki/Grading_in_education" target="_blank">'GPA'</a>
+                                is well and good.)</small>
+                        </p>
+                        <div class="emp-add edu-add">
+                            + Add education
+                        </div>
+                    </div>
+                    <div class="emp-fill-data inner-info">
+                        <div class="data-inputs">
+                            <label for="d-clg" class="label-padd">College Name</label>
+                            <input type="text" id="d-clg" class="input-adjust">
+                        </div>
+                        <div class="data-inputs">
+                            <label for="d-degree" class="label-padd">Degree</label>
+                            <input type="text" id="d-degree" class="input-adjust">
+                        </div>
+                        <div class="dates">
+                            <label for="d-strt" class="label-padd">Start & End Date</label>
+                            <div class="adjust-dates">
+                                <div class="data-inputs">
+                                    <input type="text" id="d-strt" class="input-adjust" placeholder=" Start MM /YYYY">
+                                </div>
+                                <div class="data-inputs">
+                                    <input type="text" id="d-End" class="input-adjust" placeholder=" End MM /YYYY">
+                                </div>
+
+                            </div>
+                        </div> <!-- dates -->
+                        <div class="data-inputs">
+                            <label for="d-edu-city" class="label-padd">City</label>
+                            <input type="text" id="d-edu-city" class="input-adjust">
+                        </div>
+                    </div>
+                </div>
+                <div class="emp-history">
+                    <div class="emp-edit">
+                        <input type="text" id="wb-title" value="Website & Social Links" class="edit-info">
+                        <label for="wb-title" class="label-padd"><ion-icon name="create-outline"></ion-icon></label>
+                    </div>
+                    <div class="emp-info ">
+                        <p class="prof-summary-msg para">
+                            You can add your awesome projects,portfolio, personal website or LinkedIn profile .
+                        </p>
+                        <div class="emp-add" id="wb-add">
+                            + Add Links
+                        </div>
+                    </div>
+                    <div class="emp-fill-data inner-info" id="wb-main-links">
+                        <div class="data-inputs">
+                            <label for="d-wb-label" class="label-padd">Label</label>
+                            <input type="text" id="d-wb-label" class="input-adjust">
+                        </div>
+                        <div class="data-inputs">
+                            <label for="d-link" class="label-padd">Link</label>
+                            <input type="text" id="d-link" class="input-adjust">
+                        </div>
+                    </div>
+                </div>
+                <div class="emp-history">
+                    <div class="emp-edit">
+                        <input type="text" id="skill-title" value="Skills" class="edit-info">
+                        <label for="skill-title" class="label-padd"><ion-icon name="create-outline"></ion-icon></label>
+                    </div>
+                    <div class="emp-info skills">
+                        <p class="prof-summary-msg para">
+                            Choose your skills as per your abilty
+                        </p>
+                        <div class="emp-add" id="skill-level">
+                            + Add Skills
+                        </div>
+                        <div class="skills-sugessions">
+                            <div class="no-experience">
+                                <!-- <input type="checkbox" name="no-exp" id="no-exp"> -->
+                                <label for="no-exp">
+                                    <p class="toggle-switch"></p>
+                                </label>
+                                <label class="no-exp-title" for="no-exp">Don't have an any experience</label>
+                            </div>
+                            <ul class="skills-list">
+                                <li class="skills-option">Ability to Work in a Team <span class="s-plus">+</span></li>
+                                <li class="skills-option">Ability to Work Under Pressure <span class="s-plus">+</span>
+                                </li>
+                                <li class="skills-option">Leadership <span class="s-plus">+</span></li>
+                                <li class="skills-option">Effective Time Management <span class="s-plus">+</span></li>
+                                <li class="skills-option">Adaptability <span class="s-plus">+</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="emp-fill-data inner-info" id="skill-add">
+                        <div class="data-inputs">
+                            <label for="d-skill-1" class="label-padd">Skill</label>
+                            <input type="text" id="d-skill-1" class="input-adjust">
+                        </div>
+                        <div class="data-inputs">
+                            <label for="d-level-1" class="label-padd">Level-Expert</label>
+                            <input type="text" id="d-level-1" class="input-adjust">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="emp-history" id="intern-history">
+                    <div class="emp-edit">
+                        <input type="text" id="intern-title" value="Internships" class="edit-info">
+                        <label for="intern-title" class="label-padd"><ion-icon name="create-outline"></ion-icon></label>
+                    </div>
+                    <div class="emp-info ">
+                        <p class="prof-summary-msg para">
+                            Add your internships
+                        </p>
+                        <div class="emp-add" id="add-intern">
+                            + Add Internships
+                        </div>
+                    </div>
+                    <div class="emp-fill-data inner-info">
+                        <div class="data-inputs">
+                            <label for="d-intern-name" class="label-padd">Job Title</label>
+                            <input type="text" id="d-intern-name" class="input-adjust">
+                        </div>
+                        <div class="data-inputs">
+                            <label for="d-intern-employer" class="label-padd">Employer</label>
+                            <input type="text" id="d-intern-employer" class="input-adjust">
+                        </div>
+                        <div class="dates">
+                            <label for="d-intern-st" class="label-padd">Start & End Date</label>
+                            <div class="adjust-dates">
+                                <div class="data-inputs">
+                                    <input type="text" id="d-intern-st" class="input-adjust" placeholder="MM /YYYY">
+                                </div>
+                                <div class="data-inputs">
+                                    <input type="text" id="d-intern-end" class="input-adjust" placeholder="MM /YYYY">
+                                </div>
+                            </div>
+                        </div> <!-- dates -->
+                        <div class="data-inputs">
+                            <label for="d-intern-city" class="label-padd">City</label>
+                            <input type="text" id="d-intern-city" class="input-adjust">
+                        </div>
+                    </div>
+                </div>
+                <div class="emp-history">
+                    <div class="emp-edit">
+                        <input type="text" id="otherT-title" value="Ohter Things" class="edit-info">
+                        <label for="otherT-title" class="label-padd"><ion-icon name="create-outline"></ion-icon></label>
+                    </div>
+                    <div class="emp-info ">
+                        <p class="prof-summary-msg para">
+                            Add your other things here <small class="red">(if you adding info. in this section change
+                                the name of <a href="#otherT-title"><span>'Other Things'</span></a> )</small>
+                        </p>
+                        <div class="emp-add">
+                            + Add Things
+                        </div>
+                    </div>
+                </div>
+                <div class="create-resume-btn">
+                    <button type="button" class="cr-btn emp-add">Generate Resume</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- **************** template Editor **************** -->
+        <div class="result">
+            <div class="bar-section">
+
+                <div class="bar">
+                    <div class="back-to-editor">
+                        <a href="/Resume Builder/Resume/resume-templates/Editor/Editor.html">
+                            <p class="right-arw"></p> Back to editor
+                        </a>
+                    </div>
+                    <div class="design-color">
+                        <ul class="color-list">
+                            <li class="colors red-bar"></li>
+                            <li class="colors blue-bar"></li>
+                            <li class="colors green-bar"></li>
+                            <li class="colors orange-bar"></li>
+                            <li class="colors choose-color"> <span class="plus">+</span></li>
+                        </ul>
+                    </div>
+                    <div class="download-btn">
+                        <button class="pdf-btn btn-color">Download PDF</button>
+                        <button class="export-btn btn-color"><span>...</span></button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- actual designing part -->
+            <div class="designs">
+    
+            <section class="aside-templates">
+                <ol class="templates">
+                    <li><img src="\Resume Builder\Resume\resume-templates\template-imges\expPeoplesOnly.jpg" alt="template-design" class="temp-img"></li>
+                    <li><img src="\Resume Builder\Resume\resume-templates\template-imges\expPeoplesOnly.jpg" alt="template-design" class="temp-img"></li>
+                    <li><img src="\Resume Builder\Resume\resume-templates\template-imges\expPeoplesOnly.jpg" alt="template-design" class="temp-img"></li>
+                    <li><img src="\Resume Builder\Resume\resume-templates\template-imges\expPeoplesOnly.jpg" alt="template-design" class="temp-img"></li>
+                    <li><img src="\Resume Builder\Resume\resume-templates\template-imges\expPeoplesOnly.jpg" alt="template-design" class="temp-img"></li>
+                    <li><img src="\Resume Builder\Resume\resume-templates\template-imges\expPeoplesOnly.jpg" alt="template-design" class="temp-img"></li>
+                    <li><img src="\Resume Builder\Resume\resume-templates\template-imges\expPeoplesOnly.jpg" alt="template-design" class="temp-img"></li>
+                    <li><img src="\Resume Builder\Resume\resume-templates\template-imges\expPeoplesOnly.jpg" alt="template-design" class="temp-img"></li>
+                    <li><img src="\Resume Builder\Resume\resume-templates\template-imges\expPeoplesOnly.jpg" alt="template-design" class="temp-img"></li>
+                    <li><img src="\Resume Builder\Resume\resume-templates\template-imges\expPeoplesOnly.jpg" alt="template-design" class="temp-img"></li>
+                </ol>
+            </section>
+    
+            <section class="template-design">
+    
+                <div class="scale-protector">
+                    <div class="temp-container">
+                        <div class="aside">
+                            <div class="img-container aside-common">
+                                <img src="/Resume Builder/Resume/resume-templates/Editor/design template/uploaded images/peacky.jpg"
+                                    alt="" class="up-pic">
+                            </div>
+                            <div class="edu-ref-protector">
+                                <div class="education aside-common">
+                                    <h2 class="edu-title">Education</h2>
+                                    <div class="clg-name">
+                                        <h3 class="clg-title edu-common">T.C.C.Baramati.</h3>
+                                        <p class="university-name edu-common">Pune University</p>
+                                        <p class="start-end-date edu-common"> june 2005 - june 2009</p>
+                                    </div>
+                                </div>
+                                <div class="reference aside-common">
+                                    <h2 class="edu-title">Reference</h2>
+                                    <div class="clg-name">
+                                        <h3 class="ref-title edu-common">Rolex martin</h3>
+                                        <p class="ref-position edu-common">Web devoloper | company Name</p>
+                                        <p class="ref-tel edu-common">T: +91 1234 56789 </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="personal">
+                                <div class="pnone p-info">
+                                    <h3 class="pn p-info-title">Phone</h3>
+                                    <p class="pn-number pea">0000000000</p>
+                                </div>
+                                <div class="email p-info">
+                                    <h3 class="em p-info-title">Email</h3>
+                                    <p class="em-address pea">shubham826852 @gmail.com</p>
+                                </div>
+                                <div class="address p-info">
+                                    <h3 class="adrss p-info-title">Address</h3>
+                                    <p class="street-address pea">your street address,</p>
+                                    <p class="city-address pea">street city / Zip code - 456 street 456</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="main-info">
+                            <div class="name-protector">
+                                <div class="user-name">
+                                    <h2 class="u-name">
+                                        <span class="f-name n-common">robin</span>
+                                        <span class="l-name n-common">Honeybea</span>
+                                    </h2>
+                                    <p class="prof-title">Professional Title</p>
+                                </div>
+                            </div>
+                            <div class="sub-main-content">
+                                <div class="about-me sub-common">
+                                    <h3 class="about-title ab-work-soft">About Me</h3>
+                                    <p class="about-me-msg msg-common">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                        elit.
+                                        Architecto neque amet, dignissimos, temporibus illum corrupti aperiam esse vitae
+                                        blanditiis
+                                        harum perspiciatis tempore natus nemo nulla!</p>
+                                </div>
+                                <div class="work-exp sub-common">
+                                    <h3 class="work-title ab-work-soft">Work Experience</h3>
+    
+                                    <div class="job-main">
+                                        <p class="start-end-date">2012-2014</p>
+    
+                                        <div class="job-area">
+                                            <div class="job-position">
+                                                <p class="job-ps-title">Job Position here</p>
+                                                <p class="job-company">Company / Name /
+                                                    <span class="c-city">California ,USA</span>
+                                                </p>
+                                            </div>
+    
+                                            <p class="job-msg">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                                Aperiam
+                                                explicabo voluptates tempore quod vero enim soluta ipsum, repellendus
+                                                accusamus id.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="job-main">
+                                        <p class="start-end-date">2012-2014</p>
+    
+                                        <div class="job-area">
+                                            <div class="job-position">
+                                                <p class="job-ps-title">Job Position here</p>
+                                                <p class="job-company">Company /Name /
+                                                    <span class="c-city">California ,USA</span>
+                                                </p>
+                                            </div>
+    
+                                            <p class="job-msg">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                                Aperiam
+                                                explicabo voluptates tempore quod vero enim soluta ipsum, repellendus
+                                                accusamus id.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="job-main">
+                                        <p class="start-end-date">2012-2014</p>
+    
+                                        <div class="job-area">
+                                            <div class="job-position">
+                                                <p class="job-ps-title">Job Position here</p>
+                                                <p class="job-company">Company /Name /
+                                                    <span class="c-city">California ,USA</span>
+                                                </p>
+                                            </div>
+    
+                                            <p class="job-msg">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                                Aperiam
+                                                explicabo voluptates tempore quod vero enim soluta ipsum, repellendus
+                                                accusamus id.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="soft-skill">
+                                    <div class="soft-heading">
+                                        <h3 class="soft-title ab-work-soft">Software Skills</h3>
+                                    </div>
+                                    <div class="sk-flex">
+                                        <div class="soft1">
+                                            <div class="label">
+                                                <label for="skill-1" class="skill">Communication Skill</label>
+                                                <span class="skill-level level1"></span>
+                                            </div>
+                                            <div class="label">
+                                                <label for="skill-2" class="skill">hotel management</label>
+                                                <span class="skill-level level1"></span>
+                                            </div>
+                                            <div class="label">
+                                                <label for="skill-3" class="skill">Communication Skill</label>
+                                                <span class="skill-level level1"></span>
+                                            </div>
+                                        </div>
+                                        <div class="soft2">
+                                            <div class="label">
+                                                <label for="skill-4" class="skill">Communication Skill</label>
+                                                <span class="skill-level level1"></span>
+                                            </div>
+                                            <div class="label">
+                                                <label for="skill-5" class="skill">Communication Skill</label>
+                                                <span class="skill-level level1"></span>
+                                            </div>
+                                            <div class="label">
+                                                <label for="skill-6" class="skill">Communication Skill</label>
+                                                <span class="skill-level level1"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="editor.js"></script>
+<script src="fillData.js"></script>
+
+</html>

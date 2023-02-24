@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.scale-protector {
+  margin: 5rem 0;
+}
+
+.temp-container {
+  display: flex;
+  justify-content: center;
+}
+
+.aside {
+  color: whitesmoke;
+  max-width: 15.5em;
+  background: linear-gradient(to right, rgb(0, 0, 0), #000000);
+}
+.aside .img-container img {
+  max-width: 23.5em;
+  width: 15em;
+  height: auto;
+}
+.aside .edu-ref-protector {
+  margin: 2em 0 4em 2em;
+}
+.aside .edu-ref-protector .aside-common .edu-title {
+  font-size: 22px;
+  text-transform: uppercase;
+}
+.aside .edu-ref-protector .aside-common .edu-title::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: gold;
+  margin-bottom: 1em;
+  margin-top: 0.5em;
+  display: block;
+}
+.aside .edu-ref-protector .aside-common .clg-name {
+  margin-bottom: 2em;
+}
+.aside .edu-ref-protector .aside-common .clg-name .edu-common {
+  font-size: 16px;
+  text-transform: capitalize;
+  margin-bottom: 0.5em;
+}
+.aside .edu-ref-protector .aside-common .clg-name .clg-title {
+  font-size: 19px;
+}
+.aside .edu-ref-protector .aside-common .clg-name .university-name {
+  font-size: 16px;
+}
+
+.personal .p-info {
+  margin-bottom: 1em;
+  margin-left: 2em;
+}
+.personal .p-info .p-info-title {
+  background: rgba(157, 154, 154, 0.316);
+  padding: 0.3em;
+  padding-left: 2.5em;
+  position: relative;
+}
+.personal .p-info .p-info-title::before {
+  content: "";
+  background: gold;
+  width: 2.7em;
+  height: 1.8em;
+  display: block;
+  position: absolute;
+  left: -1.7em;
+  top: 0;
+}
+.personal .p-info .pea {
+  margin-top: 0.5em;
+  margin-left: 3em;
+}
+
+.main-info {
+  max-width: 500px;
+  background: white;
+}
+
+.name-protector {
+  padding-top: 3em;
+  padding-bottom: 1em;
+}
+.name-protector .user-name {
+  background: gold;
+  padding: 1.5em;
+  padding-left: 3em;
+}
+.name-protector .user-name .prof-title {
+  color: grey;
+}
+.name-protector .u-name {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.name-protector .u-name .l-name {
+  font-weight: 300;
+}
+
+.sub-main-content {
+  margin: 2em;
+}
+.sub-main-content .ab-work-soft {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.857);
+}
+.sub-main-content .ab-work-soft::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: grey;
+  display: block;
+  margin-top: 0.3em;
+  margin-bottom: 1em;
+}
+.sub-main-content .msg-common {
+  margin-bottom: 2em;
+}
+
+.job-main {
+  display: flex;
+  gap: 2em;
+  margin-bottom: 2em;
+}
+
+.job-position {
+  margin-bottom: 1em;
+}
+
+.sk-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill-level {
+  display: block;
+  width: 50%;
+  height: 3px;
+  background: #000000;
+  border-bottom-right-radius: 2px;
+}
+
+@media screen and (max-width: 579px) {
+  .temp-container {
+    transform: scale();
+    justify-content: flex-start;
+  }
+  .aside {
+    max-width: 11em;
+  }
+  .aside .img-container img {
+    width: 10em;
+  }
+  .aside .edu-ref-protector {
+    margin: 1.5em 0 1em 1em;
+  }
+  .aside .edu-ref-protector .aside-common .edu-title {
+    font-size: 18px;
+  }
+  .aside .edu-ref-protector .aside-common .edu-title::after {
+    margin-bottom: 0.5em;
+  }
+  .aside .edu-ref-protector .aside-common .clg-name {
+    margin-bottom: 1.5em;
+  }
+  .aside .edu-ref-protector .aside-common .clg-name .edu-common {
+    font-size: 14px;
+  }
+  .aside .edu-ref-protector .aside-common .clg-name .clg-title {
+    font-size: 15px;
+  }
+  .personal .p-info {
+    margin-left: 1em;
+  }
+  .personal .p-info .p-info-title {
+    padding-left: 1.5em;
+  }
+  .personal .p-info .p-info-title::before {
+    width: 2.5em;
+    height: 1.77em;
+  }
+  .personal .p-info .pea {
+    margin-left: 1.5em;
+  }
+  .personal .p-info .em-address {
+    color: red;
+  }
+  .main-info {
+    max-width: 480px;
+  }
+  .name-protector {
+    padding-top: 2em;
+  }
+  .name-protector .user-name {
+    padding: 1em 0;
+    padding-left: 0.5em;
+  }
+  .name-protector .user-name .prof-title {
+    margin-top: 0.3em;
+    font-size: 15px;
+  }
+  .name-protector .u-name {
+    font-size: 16px;
+    letter-spacing: 0;
+  }
+  .sub-main-content {
+    margin: 1em;
+  }
+  .sub-main-content .ab-work-soft {
+    font-size: 16px;
+  }
+  .job-main {
+    gap: 1em;
+  }
+}/*# sourceMappingURL=template.css.map */
