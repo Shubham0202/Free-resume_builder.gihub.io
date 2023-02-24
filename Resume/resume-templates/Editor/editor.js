@@ -41,15 +41,28 @@ no_exp.addEventListener('click',
     // back to Editor Code 
     let Back = document.querySelector('.back-to-editor');
     Back.addEventListener('click',(e)=>{
-        const cs = confirm("If you go back to editor may lost your filled information");
-        if(cs == true){
-            console.log("back Editor");
+        const cs = confirm("If you go back to editor you may lost your filled information");
+        if(cs == !true){
+            console.log("Stay");
+            e.preventDefault();
         }
-        else{
-             e.preventDefault();
-            console.log('cancel ')
-        }
+      
     });
+
+    // do not refresh editor page code
+    const scriptgs = document.querySelector('script');
+    let ff=fetch(scriptgs);
+   try {
+    
+    if( ff== onload)
+   console.log(lod+"=");
+    
+   } catch (error) {
+    console.log(error);
+    console.log(" script not Loaded"+error);
+
+   }
+
 
 // ********************  Skills options *********************
 let skillsOp = document.querySelectorAll('.skills-option');
@@ -172,7 +185,7 @@ empAdd.addEventListener('click',()=>{
     // adding empFillData into emp history before emp-info 
     let empHistory = document.querySelector('.emp-history');
     empHistory.append(empFillData);
-    console.log(empHistory.children);
+    // console.log(empHistory.children);
 });
 
 
@@ -270,7 +283,7 @@ eduAdd.addEventListener('click',()=>{
     // adding empFillData into emp history before emp-info 
     let eduHistory = document.querySelector('.edu-history');
     eduHistory.append(empFillData);
-    console.log(eduHistory.children);
+    // console.log(eduHistory.children);
 });
 
 let webSocial = document.querySelector('#wb-add');
@@ -301,11 +314,11 @@ webSocial.addEventListener('click',()=>{
     let linkDataInp = document.createElement('div');
     linkDataInp.classList.add('data-inputs');
     linkDataInp.append(linkLabel,webLinksInp);
-    console.log(linkDataInp.children);
+    // console.log(linkDataInp.children);
 
     let mainLinkerSection = document.querySelector('#wb-main-links');
     mainLinkerSection.append(dataInp,linkDataInp);
-    console.log(webLabel);
+    // console.log(webLabel);
 });
 
 let skillLevel = document.querySelector('#skill-level');
@@ -341,7 +354,7 @@ skillLevel.addEventListener('click',()=>{
 
     let mainLinkerSection = document.querySelector('#skill-add');
     mainLinkerSection.append(dataInp,linkDataInp);
-    console.log(skillLabel,skillInp);
+    // console.log(skillLabel,skillInp);
 });
 
 
@@ -439,7 +452,7 @@ internAdd.addEventListener('click',()=>{
     // adding empFillData into emp history before emp-info 
     let internHistory = document.querySelector('#intern-history');
     internHistory.append(empFillData);
-    console.log(internHistory.children);
+    // console.log(internHistory.children);
 });
 
 

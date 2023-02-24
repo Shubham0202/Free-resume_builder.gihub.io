@@ -244,7 +244,9 @@ header {
     font-size: 18px;
     max-width: 750px;
 }
-
+.btn-down{
+    margin-bottom: 1em;
+}
 .resume-btn .r-btn {
     font-size: 17px;
     margin-bottom: var(--normal-margin);
@@ -264,6 +266,9 @@ header {
 .user-today {
     /* border: 2px solid; */
     position: relative;
+    /* color: white; */
+    /* when bg is added  */
+    
 }
 
 .user-today::before {
@@ -281,8 +286,8 @@ header {
 .bgadd{
     margin: 0!important;
     padding: 1em 0;
-    color: white;
-    background: url('bg/rose.jpg') no-repeat;
+    /* color: white; */
+    /* background: url('bg/bookstore1.jpg') no-repeat; */
     background-position: center;
     background-size: cover;
 }
@@ -549,6 +554,9 @@ header {
     
 }
 @media screen and (max-width:500px) {
+    .resume-btn .r-btn {
+        font-size: 14px;
+    }
     .f-items{
         grid-template-columns: 1fr;
     }
