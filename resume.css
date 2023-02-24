@@ -434,7 +434,7 @@ header {
     filter: invert(0.5) sepia(1) saturate(5) hue-rotate(170deg);
 }
 .ul-social .s3{
-    filter: brightness(0) saturate(100%) invert(19%) sepia(69%) saturate(6971%) hue-rotate(356deg) brightness(99%) contrast(119%);
+    filter: invert(20%) sepia(85%) saturate(5754%) hue-rotate(355deg) brightness(97%) contrast(122%);
 }
 .ul-social .s4{
     filter: invert(0.5) sepia(1) saturate(5) hue-rotate(200deg);
