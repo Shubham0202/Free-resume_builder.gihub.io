@@ -1,0 +1,372 @@
+//  @mixin common{
+//     repeated code write in this 
+//  }
+// @include common; accessing
+// 6088
+@import '_fcolors.scss';
+$normal-margin: 1em;
+$medium-margin: .5em;
+$toggle-transition: 600ms;
+@mixin textAndDeco{
+    text-decoration: none;
+    list-style: none;
+    // border: 1px solid;
+}
+
+// colors
+// $blue-color : #166ce5;
+// $red : #fa3200e7;
+// $grey-black-mix:#363535;
+// $para-msg-color: #9f93ad;
+
+.option-color{
+    color: #0add0a!important;
+}
+.red{
+    color: $red;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.dBlock{
+    display: block!important;
+}
+.dNone{
+    display: none!important;
+}
+.norm-margin{
+    margin: 1em;
+}
+.main-content{
+    display: grid;
+    // border-bottom: 4px solid hotpink;
+    // border-top: 4px solid orangered;
+    // border-left: 4px solid yellow;
+    // border-right: 4px solid blueviolet;
+    // border-radius: 5px;
+    place-items: center;
+}
+.container{
+    margin: 4rem;
+}
+.myacc{
+    position: absolute;
+    right: 1em;
+    top: 4px;
+    outline: none;
+    max-width: 100vw;
+}
+#acc-dashboard{
+    // border: 2px solid;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 2px 5px 10px grey;
+    position: absolute;
+    right: 1em;
+    top: 3em;
+    @include textAndDeco();
+    z-index: 2;
+    padding: $medium-margin+.2em;
+    max-width: -moz-available;
+   
+    display: none;
+    transition: all 800ms ease!important;
+
+}
+
+.hide-accDash{
+    display: block!important;
+}
+#acc-profile{
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: $normal-margin;
+    max-width: fit-content;
+    border-bottom: 1px solid $grey-black-mix;
+    & .p-img{
+        border-radius: 100vmax;
+        width: 50px;
+        height: 50px;
+    }
+}
+.dAnchor{
+@include textAndDeco();
+display: block;
+color: $grey-black-mix;
+padding: $medium-margin ;
+border-radius: 5px;
+}
+.dAnchor:hover{
+    background: rgba(228, 224, 224, 0.216);
+}
+.p-name,.p-email{
+    max-width: 100vw;
+    width: 18vmax;
+    overflow-wrap: break-word; //use this in template wala email
+}
+.p-email{
+font-size: 14px;
+margin-top: $medium-margin;
+color: $grey-black-mix;
+}
+.pfd{
+    margin: $normal-margin+2em 0;
+}
+.profile{
+    font-size: 30px;
+}
+.pdf-name{
+    text-align: center;
+    
+}
+#pdf-input{
+    border: none;
+    border-bottom: 2px solid;
+    text-align: center;
+    outline: none;
+    max-width: fit-content;
+    font-weight: bold;
+    font-style: oblique;
+    margin-bottom: 3em;
+}
+
+.info-title{
+    margin-bottom: $normal-margin;
+}
+#personal-info-title{
+    outline: none;    /* remove margin incase media query is not adapt it  */
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    width: 9em;
+}
+.inner-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    /* max-width: 600px; */
+}
+/* .job-title{
+    border: 2px solid;
+} */
+.label-padd{
+    color: #8eabcf;
+    font-size: 17px;
+}
+
+.input-adjust{
+    display: block;
+    margin-bottom:  $normal-margin;
+    padding: 1em 8px;
+    max-width: 32em;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background: #eff2f9;
+    outline: none;
+    position: relative;
+}
+
+#browse-img{
+    font-size: 29px;
+}
+.input-adjust:focus-within{
+    background: #fafafa;
+    border-bottom: 2px solid blue;
+    border-radius: 10px;
+}
+
+.edit-info{
+    border: none;
+    outline: none;
+    margin: 1em 0;  
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    width: fit-content;
+}
+.para{
+    margin-left: 1em ;
+    // max-width: 1000px;
+    color: $para-msg-color;
+    font-size: 17px;
+    font-weight: 400;
+}
+.prof-summary-msg{
+    max-width: 1000px;
+    color: $para-msg-color;
+    font-size: 17px;
+}
+.text-features{
+    background: #f9f8fa;
+    padding-top: 3px;
+    border-radius: 5px;
+    // border: 1px solid grey;
+}
+#txtarea{
+    width: 100%;
+    outline: none;
+    border: none;
+    background: #f9f8fa;
+    /* border: 1px solid grey; */
+}
+.btn-feature-list{
+    margin-top: 1em;
+    cursor: context-menu;
+}
+.f-l-btn{
+    font-size: 17px;
+    cursor: pointer;
+    /* padding: 4px 6px; */
+    margin: 0px 7px;
+    background: transparent;
+}
+.f-l-btn:hover{
+    color: $blue-color;
+}
+.dates{
+
+    & .adjust-dates{
+        display: flex;
+        gap: 1em;
+    }
+}
+
+.emp-add {
+    color: $blue-color;
+    cursor: pointer;
+    margin: 1em 0;
+    border: none;
+    background: transparent;
+    font-weight: bold;
+    width: fit-content!important;
+}
+
+.skills-sugessions{
+    margin-bottom: 2em;
+    & .no-experience{
+        // background: red;
+        margin-bottom: 1rem;
+        & .no-exp-title{
+            position: relative;
+            bottom: .5em;
+        }
+    }
+    & .toggle-switch{
+        width: 3em;
+        height: 1.5em;
+        margin: auto .5em;
+        background: $blue-color;
+        border-radius: 100vmax;
+        display: inline-block;
+        position: relative;
+        transition: all  $toggle-transition;
+        &::after{
+            content: '';
+            width: 1em;
+            height: 1em;
+            background: white;
+            display: block;
+            border-radius: 100vmax;
+            position: absolute;
+            top: .21em;
+            left: var(--default-ps,.2em);
+            transition: all  $toggle-transition;
+            
+        }    
+    }
+    
+}
+.change-switch{
+    background: $grey-black-mix!important;
+    transition: all  $toggle-transition;
+   
+}
+.skills-list{
+    display: flex;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    gap: 1em;
+    list-style: none;
+    & .skills-option{
+        color: $skills-option-color;
+        background: #f9f8fa;
+        padding: .3em;
+        cursor: pointer;
+        .s-plus{
+           font-size: 22px;
+        }
+    }
+}
+
+.emp-fill-data{
+    margin-bottom: $normal-margin;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.728);
+}
+.create-resume-btn{
+    // padding-top: 1em;
+    border-top: 2px solid ;
+}
+.create-resume-btn::before{
+    content: '***** Create Your Future  *****';
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+
+}
+.cr-btn{
+    color: $white;
+    background: $gen-resume-btn-bgcolor;
+    padding: $medium-margin+.2em;
+    border-radius: 3px;
+}
+
+// Result edit 
+.result{
+    display: none;
+    margin: 0;
+    width: 100vw;
+}
+
+
+@media screen and (max-width: 605px) {
+    .container{
+        margin: 2em;
+    }
+    .p-name,.p-email{
+        width: 24vmax;
+    }
+}
+
+@media screen and (max-width: 565px) {
+    .container{
+        margin: 1em;
+    }
+}
+@media screen and (max-width: 500px) {
+    .inner-info{
+        grid-template-columns: 1fr;
+    }
+    .edit-info{
+        width: 11em;
+        font-size: 19px;
+    }
+   
+   
+}
+
+@media screen and (max-width:330px) {
+    .skills-sugessions{
+        & .no-experience{
+            & .no-exp-title{
+                bottom: 0;
+        }
+        }
+}
+}
