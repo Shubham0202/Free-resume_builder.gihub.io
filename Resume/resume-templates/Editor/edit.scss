@@ -43,11 +43,6 @@ $toggle-transition: 600ms;
 }
 .main-content{
     display: grid;
-    // border-bottom: 4px solid hotpink;
-    // border-top: 4px solid orangered;
-    // border-left: 4px solid yellow;
-    // border-right: 4px solid blueviolet;
-    // border-radius: 5px;
     place-items: center;
 }
 .container{
@@ -118,7 +113,7 @@ color: $grey-black-mix;
 .pfd{
     margin: $normal-margin+2em 0;
 }
-.profile{
+.upper-profile{
     font-size: 30px;
 }
 .pdf-name{
