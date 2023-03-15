@@ -408,6 +408,19 @@ internAdd.addEventListener('click',()=>{
     // console.log(internHistory.children);
 });
 
+
+// working pahse msg 
+
+let workingPhase = document.querySelector('.close-msg');
+workingPhase.addEventListener('click',()=>{
+    let working  = document.querySelector('.working');
+    working.style.display="none";
+})
+
+
+
+
+
 // generate pdf code 
 
 const resumeArea = document.querySelector('.template-design');
