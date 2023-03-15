@@ -97,6 +97,8 @@
 .designs {
   display: flex;
   gap: 1em;
+  height: -moz-max-content;
+  height: max-content;
   position: fixed;
   top: 3em;
 }

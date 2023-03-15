@@ -412,10 +412,17 @@ internAdd.addEventListener('click',()=>{
 // working pahse msg 
 
 let workingPhase = document.querySelector('.close-msg');
+let working  = document.querySelector('.working');
 workingPhase.addEventListener('click',()=>{
-    let working  = document.querySelector('.working');
-    working.style.display="none";
+  let wk = working.style.display="none";
+    //  let j=JSON.stringify(wk);
+    localStorage.setItem('work',wk)
+  
 })
+let a = localStorage.getItem('work')
+// console.log(a)
+if(a== "none")
+working.style.display="none"
 
 
 
@@ -427,6 +434,12 @@ const resumeArea = document.querySelector('.template-design');
 const downloadResume=document.querySelector('#download-rsm');
 downloadResume.addEventListener('click',()=>{
 generatePdf();
+downloadResume.style.background="green";
+downloadResume.innerHTML= 'Downloading'
+setTimeout(() => {
+    downloadResume.innerHTML = 'Download as PDF';
+    
+}, 5000);
 })
 const pdfName= document.querySelector('#pdf-input').value;
 const resumeOptions = {
