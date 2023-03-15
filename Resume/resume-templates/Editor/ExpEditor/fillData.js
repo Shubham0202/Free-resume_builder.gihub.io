@@ -47,8 +47,54 @@ GenButton.addEventListener('click',function Gen(){
     
     let referenceName = document.querySelector('.ref-title');
     let refPosition = document.querySelector('.ref-position');
-    let refTelephone = document.querySelector('.ref-tel');    
-     
+    let refTelephone = document.querySelector('.ref-tel');   
+    let irefName = document.querySelector('#d-ref-name').value;
+    referenceName.innerText=irefName;
+    let irefJob = document.querySelector('#d-ref-job').value;
+    let irefCompany = document.querySelector('#d-ref-company-name').value;
+    refPosition.innerHTML=`${irefJob} | ${irefCompany}`;    
+    let ireftel = document.querySelector('#d-ref-tel').value;
+    refTelephone.innerHTML = ireftel;
+
+    // work experience field 
+
+    let jobMain = document.createElement('div');
+    jobMain.className = 'job-main';
+    let jobStartEndDate = document.createElement('p');
+        jobStartEndDate.className = 'start-end-date';
+    let jobArea = document.createElement('div');
+        jobArea.className = 'job-area';
+    let jobPosition = document.createElement('div');
+        jobPosition.className = 'job-position';
+    let jobPTitle = document.createElement('p');
+        jobPTitle.className = 'job-ps-title';
+    let jobCompany = document.createElement('p');
+        jobCompany.className = 'job-company';
+    jobPosition.append(jobPTitle,jobCompany); 
+    
+    let jobMsg = document.createElement('p');
+    jobMsg.className = 'job-msg';
+    jobArea.append(jobPosition,jobMsg);
+
+    jobMain.append(jobStartEndDate,jobArea);
+    // console.log(jobMain.children)
+
+
+    let workExp = document.querySelector('.work-exp'); //template field it is for append this in job main
+
+    let iempJobTitle = document.getElementById('d-name').value;
+    let iempCompName = document.getElementById('d-employer').value;
+    let iempStDate = document.getElementById('d-st').value;
+    let iempEndDate = document.getElementById('d-end').value;
+    let iempCity = document.getElementById('d-city').value;
+    let iempJOverview = document.getElementById('i-job-msg').value;
+    jobPTitle.innerText=iempJobTitle;
+    jobCompany.innerHTML = `${iempCompName} / ${iempCity}`;
+    jobStartEndDate.innerHTML =`${iempStDate} ${iempEndDate}`;
+    jobMsg.innerText = iempJOverview;
+    let str = '';
+    workExp.append(jobMain);
+    
 });
 let mypic =document.querySelector('#mypic');
 mypic.addEventListener("change",function previewImage(event){

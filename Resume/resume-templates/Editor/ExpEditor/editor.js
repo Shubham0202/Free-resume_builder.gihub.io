@@ -286,41 +286,6 @@ eduAdd.addEventListener('click',()=>{
     // console.log(eduHistory.children);
 });
 
-let webSocial = document.querySelector('#wb-add');
-webSocial.addEventListener('click',()=>{
-    let lbPadd  = 'label-padd';
-    let inpAdj = 'input-adjust';
-    let webLabel = document.createElement('label');
-    let webLinkInp = document.createElement('input');
-    let webId = webLinkInp.id = 'wb-label';
-    webLinkInp.type = 'text';
-    webLinkInp.classList.add(inpAdj);
-    webLabel.classList.add(lbPadd);
-    webLabel.setAttribute('for',webId);
-    webLabel.innerText = 'Label';
-
-    let linkLabel = document.createElement('label');
-    let webLinksInp = document.createElement('input');
-    let linkId = linkLabel.id = 'wb-link-label';
-    webLinksInp.classList.add(inpAdj);
-    linkLabel.classList.add(lbPadd);
-    linkLabel.setAttribute('for',linkId);
-    linkLabel.innerText = 'Links';
-
-    let dataInp = document.createElement('div');
-    dataInp.classList.add('data-inputs');
-    dataInp.append(webLabel,webLinkInp);
-    console.log(dataInp.children);
-    let linkDataInp = document.createElement('div');
-    linkDataInp.classList.add('data-inputs');
-    linkDataInp.append(linkLabel,webLinksInp);
-    // console.log(linkDataInp.children);
-
-    let mainLinkerSection = document.querySelector('#wb-main-links');
-    mainLinkerSection.append(dataInp,linkDataInp);
-    // console.log(webLabel);
-});
-
 let skillLevel = document.querySelector('#skill-level');
 skillLevel.addEventListener('click',()=>{
     let i=0;
@@ -367,49 +332,48 @@ internAdd.addEventListener('click',()=>{
     let lbPadd = 'label-padd';
     let jobLabel = document.createElement('label');
     let jobTitle = document.createElement('input');
-    let jl=jobTitle.id='intern-name';
+    let jl=jobTitle.id='d-ref-name';
     jobTitle.type='text';
     jobTitle.classList.add(inpadj);
     jobLabel.setAttribute('for',jl);
     jobLabel.classList.add('label-padd');
-    jobLabel.innerText='Job Title';
+    jobLabel.innerText='Name';
     
     let empLabel = document.createElement('label');
     let employer = document.createElement('input');
-    let el=  employer.id='intern-employer';
+    let el=  employer.id='d-ref-job';
     employer.type='text';
     employer.classList.add(inpadj);
     empLabel.setAttribute('for',el);
     empLabel.classList.add('label-padd');
-    empLabel.innerText='Employer';
+    empLabel.innerText='Job Title';
     
-    let startDateLabel = document.createElement('label');
-    let startDateInput = document.createElement('input');
-    let std = startDateInput.id='intern-st';
-    startDateInput.type = 'datetime';
-    startDateInput.placeholder='MM/YYYY';
-    startDateInput.classList.add(inpadj); 
-    startDateLabel.setAttribute('for',std);
-    startDateLabel.classList.add(lbPadd);
-    startDateLabel.innerText = 'Start & End Date';
+  
 
-    let endDateInput = document.createElement('input');
-    let endD = endDateInput.id='intern-end';
-    endDateInput.type = 'datetime';
-    endDateInput.placeholder='MM/YYYY';
-    endDateInput.classList.add(inpadj); 
 
     let empCity = document.createElement('input');
-    let empCityId = empCity.id='intern-city';
+    let empCityId = empCity.id='d-ref-company-Name';
     empCity.type='text';
     empCity.classList.add(inpadj);
 
     let empCityLabel = document.createElement('label');
     empCityLabel.setAttribute('for',empCityId);
     empCityLabel.classList.add(lbPadd);
-    empCityLabel.innerText = 'City';
+    empCityLabel.innerText = 'Company Name';
 
-    // creating div tags to add them this upper input tags 
+    let compnay = document.createElement('input');
+    let cmId = compnay.id='d-ref-tel';
+    compnay.type='text';
+    compnay.classList.add(inpadj);
+
+    let compLabel = document.createElement('label');
+    compLabel.setAttribute('for',empCityId);
+    compLabel.classList.add(lbPadd);
+    compLabel.innerText = 'Telephone';
+
+
+
+    // creating div tags to add to add them in one div & append it reference 
     let dInp = 'data-inputs';
     let empFillData = document.createElement('div');
     empFillData.classList.add('emp-fill-data','inner-info');
@@ -425,29 +389,18 @@ internAdd.addEventListener('click',()=>{
     dEmployerInp.appendChild(empLabel);
     dEmployerInp.appendChild(employer);
     empFillData.appendChild(dEmployerInp);
-    let dates = document.createElement('div');
-    dates.classList.add('dates');
-    dates.appendChild(startDateLabel);
-    empFillData.appendChild(dates);
-    let adjustDates = document.createElement('div');
-    adjustDates.classList.add('adjust-dates');
-    dates.appendChild(adjustDates);
     
-    let dStartDInp = document.createElement('div');
-    dStartDInp.classList.add(dInp);
-    adjustDates.appendChild(dStartDInp);
-    dStartDInp.appendChild(startDateInput);
-
-    let dEndInp = document.createElement('div');
-    dEndInp.classList.add(dInp);
-    adjustDates.appendChild(dEndInp);
-    dEndInp.appendChild(endDateInput);
-
     let dEmpCity = document.createElement('div');
     dEmpCity.classList.add(dInp);
     dEmpCity.appendChild(empCityLabel);
     dEmpCity.appendChild(empCity);
     empFillData.appendChild(dEmpCity);
+
+    let dCompany = document.createElement('div');
+    dCompany.classList.add(dInp);
+    dCompany.appendChild(compLabel);
+    dCompany.appendChild(compnay);
+    empFillData.appendChild(dCompany);
 
     // adding empFillData into emp history before emp-info 
     let internHistory = document.querySelector('#intern-history');
@@ -455,7 +408,25 @@ internAdd.addEventListener('click',()=>{
     // console.log(internHistory.children);
 });
 
+// generate pdf code 
 
+const resumeArea = document.querySelector('.template-design');
+const downloadResume=document.querySelector('#download-rsm');
+downloadResume.addEventListener('click',()=>{
+generatePdf();
+})
+const pdfName= document.querySelector('#pdf-input').value;
+const resumeOptions = {
+    margin: 1,
+    filename: pdfName,
+    image : {type: 'jpeg',quality:1},
+    html2canvas: {scale: 5}, // remeber scale defines the resume quality
+    jsPdf: {unit: 'in', format: 'a4', orientation: 'portrait'}
+}
+function generatePdf()
+{
+    html2pdf(resumeArea,resumeOptions);
+}
 // let form = document.querySelectorAll('input');
 // let data = setInterval(() => {
 //     personalInfoTitle = document.querySelector('#personal-info-title').value;

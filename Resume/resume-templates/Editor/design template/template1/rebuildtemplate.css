@@ -142,7 +142,7 @@
   margin-bottom: 0.5em;
 }
 
-.job-ps-title, .job-company, .job-msg, .start-end-date {
+.job-ps-title, .job-company, .job-msg, .we-start-end-date {
   font-size: 7px;
 }
 
@@ -253,6 +253,9 @@
   .job-ps-title, .job-company, .job-msg, .start-end-date {
     font-size: 10px;
   }
+  .we-start-end-date {
+    font-size: 10px;
+  }
   .skill {
     font-size: 10px;
   }
@@ -350,6 +353,9 @@
     margin-bottom: 0.5em;
   }
   .job-ps-title, .job-company, .job-msg, .start-end-date {
+    font-size: 13px;
+  }
+  .we-start-end-date {
     font-size: 13px;
   }
   .skill {

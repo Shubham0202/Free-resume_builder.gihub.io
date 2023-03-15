@@ -145,7 +145,7 @@
                             <input type="text" id="d-name" class="input-adjust">
                         </div>
                         <div class="data-inputs">
-                            <label for="d-employer" class="label-padd">Employer</label>
+                            <label for="d-employer" class="label-padd">Company Name</label>
                             <input type="text" id="d-employer" class="input-adjust">
                         </div>
                         <div class="dates">
@@ -163,7 +163,11 @@
                             <label for="d-city" class="label-padd">City</label>
                             <input type="text" id="d-city" class="input-adjust">
                         </div>
-                    </div>
+                        <div class="job-overview data-inputs">
+                            <label for="i-job-msg" class="label-padd">Job Overview</label>
+                            <input type="text" id="i-job-msg" class="input-adjust">
+                        </div>
+                    </div> 
                 </div>
                 <div class="emp-history edu-history">
                     <div class="emp-edit">
@@ -207,30 +211,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="emp-history">
-                    <div class="emp-edit">
-                        <input type="text" id="wb-title" value="Website & Social Links" class="edit-info">
-                        <label for="wb-title" class="label-padd"><ion-icon name="create-outline"></ion-icon></label>
-                    </div>
-                    <div class="emp-info ">
-                        <p class="prof-summary-msg para">
-                            You can add your awesome projects,portfolio, personal website or LinkedIn profile .
-                        </p>
-                        <div class="emp-add" id="wb-add">
-                            + Add Links
-                        </div>
-                    </div>
-                    <div class="emp-fill-data inner-info" id="wb-main-links">
-                        <div class="data-inputs">
-                            <label for="d-wb-label" class="label-padd">Label</label>
-                            <input type="text" id="d-wb-label" class="input-adjust">
-                        </div>
-                        <div class="data-inputs">
-                            <label for="d-link" class="label-padd">Link</label>
-                            <input type="text" id="d-link" class="input-adjust">
-                        </div>
-                    </div>
-                </div>
+               
                 <div class="emp-history">
                     <div class="emp-edit">
                         <input type="text" id="skill-title" value="Skills" class="edit-info">
@@ -275,40 +256,34 @@
                 </div>
                 <div class="emp-history" id="intern-history">
                     <div class="emp-edit">
-                        <input type="text" id="intern-title" value="Internships" class="edit-info">
+                        <input type="text" id="intern-title" value="Reference" class="edit-info">
                         <label for="intern-title" class="label-padd"><ion-icon name="create-outline"></ion-icon></label>
                     </div>
                     <div class="emp-info ">
                         <p class="prof-summary-msg para">
-                            Add your internships
+                            Add your Reference
                         </p>
                         <div class="emp-add" id="add-intern">
-                            + Add Internships
+                            + Add Reference
                         </div>
                     </div>
                     <div class="emp-fill-data inner-info">
                         <div class="data-inputs">
-                            <label for="d-intern-name" class="label-padd">Job Title</label>
-                            <input type="text" id="d-intern-name" class="input-adjust">
+                            <label for="d-ref-name" class="label-padd">Name</label>
+                            <input type="text" id="d-ref-name" class="input-adjust">
                         </div>
                         <div class="data-inputs">
-                            <label for="d-intern-employer" class="label-padd">Employer</label>
-                            <input type="text" id="d-intern-employer" class="input-adjust">
+                            <label for="d-ref-job" class="label-padd">Job Title</label>
+                            <input type="text" id="d-ref-job" class="input-adjust">
                         </div>
-                        <div class="dates">
-                            <label for="d-intern-st" class="label-padd">Start & End Date</label>
-                            <div class="adjust-dates">
-                                <div class="data-inputs">
-                                    <input type="text" id="d-intern-st" class="input-adjust" placeholder="MM /YYYY">
-                                </div>
-                                <div class="data-inputs">
-                                    <input type="text" id="d-intern-end" class="input-adjust" placeholder="MM /YYYY">
-                                </div>
-                            </div>
-                        </div> <!-- dates -->
+                      
                         <div class="data-inputs">
-                            <label for="d-intern-city" class="label-padd">City</label>
-                            <input type="text" id="d-intern-city" class="input-adjust">
+                            <label for="d-ref-compnay-name" class="label-padd">Company Name</label>
+                            <input type="text" id="d-ref-company-name" class="input-adjust">
+                        </div>
+                        <div class="data-inputs">
+                            <label for="d-ref-tel" class="label-padd">Telephone</label>
+                            <input type="text" id="d-ref-tel" class="input-adjust">
                         </div>
                     </div>
                 </div>
@@ -353,7 +328,7 @@
                         </ul>
                     </div>
                     <div class="download-btn">
-                        <button class="pdf-btn btn-color">Download PDF</button>
+                        <button class="pdf-btn btn-color" id="download-rsm">Download PDF</button>
                         <button class="export-btn btn-color"><span>...</span></button>
                     </div>
                 </div>
@@ -442,9 +417,10 @@
                                 </div>
                                 <div class="work-exp sub-common">
                                     <h3 class="work-title ab-work-soft">Work Experience</h3>
+    <!-- comment start  -->
     
                                     <div class="job-main">
-                                        <p class="start-end-date">2012-2014</p>
+                                        <p class="start-end-date">2012-2018</p>
     
                                         <div class="job-area">
                                             <div class="job-position">
@@ -497,6 +473,8 @@
                                             </p>
                                         </div>
                                     </div>
+
+                                    <!-- comment  -->
                                 </div>
     
                                 <div class="soft-skill">
@@ -545,5 +523,5 @@
 </body>
 <script src="editor.js"></script>
 <script src="fillData.js"></script>
-
+<script src="html2pdf.bundle.min.js"></script>
 </html>
