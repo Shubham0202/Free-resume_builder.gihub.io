@@ -98,7 +98,26 @@ GenButton.addEventListener('click',function Gen(){
 
     //skils section
 
-    let skill = document.getElementById()
+    let iskill = document.querySelectorAll('.skill-ip');
+    let ilevel = document.querySelectorAll('.levelip');
+    let softSkill = document.querySelector('.sk-flex');
+    // create new element for adding this skill i/p into newly created item and it append it skflex  
+    let skillMainDiv = document.createElement('div');
+    let skLable = document.createElement('label');
+    let skSpan = document.createElement('span');
+    skillMainDiv.className = 'label';
+    skLable.className= 'skill';
+    skSpan.className='skill-level';
+    skillMainDiv.append(skLable,skSpan);
+
+    iskill.forEach(e=>{
+        skLable.innerText=e.value;
+    })
+    ilevel.forEach(il=>{
+        // toggle_switch.style.setProperty('--default-ps', '0.2em');
+        skSpan.style.setProperty('--level','li.value'+'%');
+    })
+    softSkill.append(skillMainDiv);
 });
 let mypic =document.querySelector('#mypic');
 mypic.addEventListener("change",function previewImage(event){

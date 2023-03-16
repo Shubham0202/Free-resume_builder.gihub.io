@@ -278,6 +278,7 @@ skillLevel.addEventListener('click',()=>{
     let skillInp = document.createElement('input');
     let skId = skillInp.id = `d-skill-${++skillsCount}`;
     skillInp.type = 'text';
+    skillInp.className='skill-ip';
     skillInp.classList.add(inpAdj);
     skillLabel.classList.add(lbPadd);
     skillLabel.setAttribute('for',skId);
@@ -286,6 +287,7 @@ console.log(skillsCount);
     let levelLabel = document.createElement('label');
     let levelInp = document.createElement('input');
     let linkId = levelInp.id = `d-label-${skillsCount}`;
+    levelInp.className='levelip';
     levelInp.classList.add(inpAdj);
     levelLabel.classList.add(lbPadd);
     levelLabel.setAttribute('for',linkId);
