@@ -95,6 +95,10 @@ GenButton.addEventListener('click',function Gen(){
     let str = '';
     workExp.append(jobMain);
     
+
+    //skils section
+
+    let skill = document.getElementById()
 });
 let mypic =document.querySelector('#mypic');
 mypic.addEventListener("change",function previewImage(event){

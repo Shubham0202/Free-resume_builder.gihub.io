@@ -269,24 +269,23 @@ eduAdd.addEventListener('click',()=>{
     eduHistory.append(empFillData);
     // console.log(eduHistory.children);
 });
-
+ let skillsCount= 1;
 let skillLevel = document.querySelector('#skill-level');
 skillLevel.addEventListener('click',()=>{
-    let i=0;
     let lbPadd  = 'label-padd';
     let inpAdj = 'input-adjust';
     let skillLabel = document.createElement('label');
     let skillInp = document.createElement('input');
-    let skId = skillInp.id = `d-skill-${1+1}`;
+    let skId = skillInp.id = `d-skill-${++skillsCount}`;
     skillInp.type = 'text';
     skillInp.classList.add(inpAdj);
     skillLabel.classList.add(lbPadd);
     skillLabel.setAttribute('for',skId);
     skillLabel.innerText = 'Skill';
-
+console.log(skillsCount);
     let levelLabel = document.createElement('label');
     let levelInp = document.createElement('input');
-    let linkId = levelInp.id = `d-label-${i+1}`;
+    let linkId = levelInp.id = `d-label-${skillsCount}`;
     levelInp.classList.add(inpAdj);
     levelLabel.classList.add(lbPadd);
     levelLabel.setAttribute('for',linkId);
