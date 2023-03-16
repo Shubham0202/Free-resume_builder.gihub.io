@@ -454,6 +454,12 @@ header {
     transform: rotate(45deg);
     color: #482aa0;
 }
+.up-arw{
+    transform: rotate(230deg);
+}
+.ans{
+    display: none;
+}
 #FAQs{
     margin: 1em;
     /* background: white; */
@@ -462,6 +468,7 @@ header {
 #FAQs li{
     padding: 1em;
     border-bottom: 1px solid grey;
+    cursor: context-menu;
 }
 .queset{
     display: flex;

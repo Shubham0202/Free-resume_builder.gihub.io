@@ -437,9 +437,10 @@ generatePdf();
 downloadResume.style.background="green";
 downloadResume.innerHTML= 'Downloading'
 setTimeout(() => {
-    downloadResume.innerHTML = 'Download as PDF';
+    downloadResume.innerHTML = 'Download Completed';
     
 }, 5000);
+
 })
 const pdfName= document.querySelector('#pdf-input').value;
 const resumeOptions = {

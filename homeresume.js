@@ -16,3 +16,16 @@ let year= new Date();
 copyright.innerHTML=year.getFullYear();
 console.log(copyright);
 
+// FAQS
+
+let FQestion = document.querySelectorAll('.q-list');
+let arrow = document.querySelector('.que-dnarw');
+let activeAns = document.querySelector('.ans');
+FQestion.forEach(e=>{
+    e.addEventListener('click',()=>{
+            activeAns.classList.toggle('ans');
+            arrow.classList.toggle('up-arw');
+
+            
+        })
+    })
