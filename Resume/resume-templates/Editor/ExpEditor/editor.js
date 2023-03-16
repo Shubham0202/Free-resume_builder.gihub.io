@@ -7,14 +7,23 @@ myAcc.addEventListener('click',()=>{
 
 // Generate resume code 
 const generate = document.querySelector('.cr-btn');
+const result = document.querySelector('.result');
+const  editor= document.querySelector('.Editor');
 generate.addEventListener('click',()=>{
-    const result = document.querySelector('.result');
-    const  editor= document.querySelector('.Editor');
     result.style.display="block";
     editor.style.display="none";
     // result.classList.add('dBlock');
     // editor.classList.add('dNone');
 });
+
+// back to editor without refresh the page
+
+const backEditor= document.querySelector('.back-to-editor');
+backEditor.addEventListener('click',(disableREfresh)=>{
+    disableREfresh.preventDefault();
+    result.style.display="none";
+    editor.style.display="block";
+})
 
 // toggle_switch code 
 
@@ -37,31 +46,6 @@ no_exp.addEventListener('click',
 
         }
     });
-
-    // back to Editor Code 
-    let Back = document.querySelector('.back-to-editor');
-    Back.addEventListener('click',(e)=>{
-        const cs = confirm("If you go back to editor you may lost your filled information");
-        if(cs == !true){
-            console.log("Stay");
-            e.preventDefault();
-        }
-      
-    });
-
-    // do not refresh editor page code
-    const scriptgs = document.querySelector('script');
-    let ff=fetch(scriptgs);
-   try {
-    
-    if( ff== onload)
-   console.log(lod+"=");
-    
-   } catch (error) {
-    console.log(error);
-    console.log(" script not Loaded"+error);
-
-   }
 
 
 // ********************  Skills options *********************
@@ -433,8 +417,9 @@ working.style.display="none"
 const resumeArea = document.querySelector('.template-design');
 const downloadResume=document.querySelector('#download-rsm');
 downloadResume.addEventListener('click',()=>{
-generatePdf();
-downloadResume.style.background="green";
+        generatePdf();
+
+downloadResume.style.background="#ff00ff";
 downloadResume.innerHTML= 'Downloading'
 setTimeout(() => {
     downloadResume.innerHTML = 'Download Completed';
@@ -454,14 +439,3 @@ function generatePdf()
 {
     html2pdf(resumeArea,resumeOptions);
 }
-// let form = document.querySelectorAll('input');
-// let data = setInterval(() => {
-//     personalInfoTitle = document.querySelector('#personal-info-title').value;
-// }, 1000);
-// form.forEach(inp =>{
-//         let p = document.querySelector('.para');
-//     inp.addEventListener('keypress',function formControl(){
-//         console.log(personalInfoTitle)
-//         p.innerHTML=personalInfoTitle
-//     })
-// })
