@@ -409,10 +409,64 @@ if(a== "none")
 working.style.display="none"
 
 
-
+// color paltes change in theme of resume 
+let redPalet = document.querySelector('.red-bar').addEventListener('click',()=>{
+    const color = 'red'
+    let username = document.querySelector('.user-name');
+    let sidebar1= document.querySelectorAll('.p-info-title');
+    sidebar1.forEach(e=>{
+        e.style.background=`${color}`;
+    })
+    
+    username.style.background=`${color}`;
+});
+let green= document.querySelector('.blue-bar').addEventListener('click',()=>{
+   const color = '#00E676';
+   const color3 = '#795548'
+    let username = document.querySelector('.user-name');
+    let aside = document.querySelector('.aside');
+    aside.style.background=`${color3}`;
+    let sidebar1= document.querySelectorAll('.p-info-title');
+    sidebar1.forEach(e=>{
+        e.style.background=`${color}`;
+    })
+    
+    username.style.background=`${color}`;
+});
+let yellow= document.querySelector('.green-bar').addEventListener('click',()=>{
+   const color = 'gold';
+   const color2 = 'rgba(157, 154, 154, 0.316)';
+   const color3='black'; 
+   let username = document.querySelector('.user-name');
+    username.style.background=`${color}`;
+    let sidebar1= document.querySelectorAll('.p-info-title');
+    let aside = document.querySelector('.aside');
+    aside.style.background=`${color3}`;
+    
+    sidebar1.forEach(e=>{
+        e.style.background=`${color2}`;
+    })
+});
+let orange= document.querySelector('.orange-bar').addEventListener('click',()=>{
+   const color = 'blueviolet';
+    let username = document.querySelector('.user-name');
+    let sidebar1= document.querySelectorAll('.p-info-title');
+    sidebar1.forEach(e=>{
+        
+        e.style.background=`${color}`;
+    })
+    
+    username.style.background=`${color}`;
+});
 
 
 // generate pdf code 
+
+const GenPdfCreateButton = document.querySelector('.cr-btn');
+    GenPdfCreateButton.addEventListener('click',()=>{
+        // if user click on generate resume then working msg will be dissapear 
+        //but it will appear when page is refreshed it not stored in local sotrage . it stores only click on close btn of the msg
+        let wk = working.style.display="none";
 
 const resumeArea = document.querySelector('.template-design');
 const downloadResume=document.querySelector('#download-rsm');
@@ -435,7 +489,10 @@ const resumeOptions = {
     html2canvas: {scale: 5}, // remeber scale defines the resume quality
     jsPdf: {unit: 'in', format: 'a4', orientation: 'portrait'}
 }
+
 function generatePdf()
 {
     html2pdf(resumeArea,resumeOptions);
 }
+
+});

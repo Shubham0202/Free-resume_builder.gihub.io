@@ -12,8 +12,15 @@ generate.addEventListener('click',()=>{
     const  editor= document.querySelector('.Editor');
     result.style.display="block";
     editor.style.display="none";
-    // result.classList.add('dBlock');
-    // editor.classList.add('dNone');
+
+    // close Not ready msg 
+    let notReady = document.querySelector('.not-ready').style.display="none";    
+});
+let notReadyBtn = document.querySelector('.f-close-btn');
+notReadyBtn.addEventListener('click',()=>{
+    let notReady = document.querySelector('.not-ready');
+    notReady.style.display="none";    
+
 });
 
 // toggle_switch code 
