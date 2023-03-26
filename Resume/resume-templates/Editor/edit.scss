@@ -19,6 +19,16 @@ $toggle-transition: 600ms;
 // $grey-black-mix:#363535;
 // $para-msg-color: #9f93ad;
 
+.back-arrow{
+    padding: .5em;
+    font-size: 18px;
+    cursor: pointer;
+    max-width: max-content;
+}
+.back-arrow:hover{
+    background: whitesmoke;
+    border-radius: 3px;
+}
 .option-color{
     color: #0add0a!important;
 }

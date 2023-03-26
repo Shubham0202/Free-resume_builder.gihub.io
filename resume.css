@@ -367,6 +367,46 @@ header {
 .item-heading{
     color:#482aa0;
 }
+
+/* FAQS */
+.mostFAQ{
+    font-size: 23px;
+}
+.que-dnarw{
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    color: #482aa0;
+}
+.up-arw{
+    transform: rotate(230deg);
+}
+.ans{
+    display: none;
+}
+#FAQs{
+    margin: 1em;
+    /* background: white; */
+    color: #141616;
+}
+#FAQs li{
+    padding: 1em;
+    border-bottom: 1px solid grey;
+    cursor: context-menu;
+}
+.queset{
+    display: flex;
+    gap: .5em;
+}
+
+.queset .que{
+    font-size: 17.7px;
+}
+.q-list .ans{
+    font-size: 16px;
+}
 /* footer start */
 
 .main-footer{
@@ -445,41 +485,6 @@ header {
     filter: invert(0.5) sepia(1) saturate(5) hue-rotate(200deg);
 }
 
-/* FAQS */
-.que-dnarw{
-    border-bottom: 2px solid black;
-    border-right: 2px solid black;
-    width: 10px;
-    height: 10px;
-    transform: rotate(45deg);
-    color: #482aa0;
-}
-.up-arw{
-    transform: rotate(230deg);
-}
-.ans{
-    display: none;
-}
-#FAQs{
-    margin: 1em;
-    /* background: white; */
-    color: #141616;
-}
-#FAQs li{
-    padding: 1em;
-    border-bottom: 1px solid grey;
-    cursor: context-menu;
-}
-.queset{
-    display: flex;
-    gap: .5em;
-}
-.faq-list .que{
-    font-size: 18px;
-}
-.faq-list .ans{
-    font-size: 16px;
-}
 /* footer links */
 
 .footer-links{
@@ -608,7 +613,15 @@ header {
    .footer-links{
     gap: 2em;
    }
-
+   .mostFAQ{
+    font-size: 19px;
+}
+   .queset .que{
+    font-size: 16px;
+   }
+   .q-list .ans{
+    font-size: 14px;
+   }
 }
 @media screen and (max-width:361px) {
   
