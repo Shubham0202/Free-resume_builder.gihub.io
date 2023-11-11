@@ -80,7 +80,7 @@ GenButton.addEventListener('click',function Gen(){
     // console.log(jobMain.children)
 
 
-    let workExp = document.querySelector('.work-exp'); //template field it is for append this in job main
+    let workExp = document.querySelector('.change-exp'); //template field it is for append this in job main
 
     let iempJobTitle = document.getElementById('d-name').value;
     let iempCompName = document.getElementById('d-employer').value;
@@ -93,9 +93,11 @@ GenButton.addEventListener('click',function Gen(){
     jobStartEndDate.innerHTML =`${iempStDate} ${iempEndDate}`;
     jobMsg.innerText = iempJOverview;
     let str = '';
-    workExp.append(jobMain);
-    
-
+    if(workExp.children.length == 3){
+        workExp.innerHTML='';
+        workExp.append(jobMain);
+        console.log(workExp);
+    }
     //skils section
 
     let iskill = document.querySelectorAll('.skill-ip');
